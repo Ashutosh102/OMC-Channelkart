@@ -26,28 +26,28 @@ const Home = () => {
 
       <Box mt="20px" display="flex" flexWrap="wrap" gap={4}>
         <PieChart 
-          title="Properties for Sale"
+          title="Channels for Sale"
           value={10}
           series={[75, 25]}
-          colors={['#275be8', '#c4e8ef']}
+          colors={['#f70202', '#fcd2d2']}
         />
         <PieChart 
-          title="Properties for Rent"
+          title="Channels for Rent"
           value={9}
           series={[60, 40]}
-          colors={['#275be8', '#c4e8ef']}
+          colors={['#f70202', '#fcd2d2']}
         />
         <PieChart 
           title="Total customers"
           value={5684}
           series={[75, 25]}
-          colors={['#275be8', '#c4e8ef']}
+          colors={['#f70202', '#fcd2d2']}
         />
         <PieChart 
-          title="Properties for Cities"
+          title="Channels for Creators"
           value={555}
           series={[75, 25]}
-          colors={['#275be8', '#c4e8ef']}
+          colors={['#f70202', '#fcd2d2']}
         />
       </Box>
 
@@ -66,7 +66,7 @@ const Home = () => {
         minWidth="100%"
         mt="25px"
       >
-        <Typography fontSize="18px" fontWeight={600} color="#000000">Latest Properties</Typography>
+        <Typography fontSize="18px" fontWeight={600} color="#000000">Latest Channels</Typography>
 
         <Box mt={2.5} sx={{ display: 'flex', flexWrap: 'wrap', gap: 4}}>
           {latestProperties.map((property) => (

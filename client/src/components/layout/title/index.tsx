@@ -2,7 +2,7 @@ import React from "react";
 import { useRouterContext, TitleProps } from "@pankod/refine-core";
 import { Button } from "@pankod/refine-mui";
 
-import { logo, yariga } from 'assets';
+import { logo, logo2} from 'assets';
 
 export const Title: React.FC<TitleProps> = ({ collapsed }) => {
   const { Link } = useRouterContext();
@@ -13,7 +13,7 @@ export const Title: React.FC<TitleProps> = ({ collapsed }) => {
         {collapsed ? (
           <img src={logo} alt="Yariga" width="28px" />
         ) : (
-          <img src={yariga} alt="Refine" width="140px" />
+          <img src={logo2} alt="Refine" width="140px" />
         )}
       </Link>
     </Button>

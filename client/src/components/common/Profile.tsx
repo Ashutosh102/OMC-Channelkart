@@ -50,7 +50,7 @@ const Profile = ({ type, name, avatar, email, properties }: ProfileProps) => (
             <Box flex={1} display="flex" flexDirection="column" justifyContent="space-between" gap="30px">
               <Stack direction="column">
                 <Typography fontSize={22} fontWeight={600} color="#11142D">{name}</Typography>
-                <Typography fontSize={16} color="#808191">Realestate Agent</Typography>
+                <Typography fontSize={16} color="#808191">Agent</Typography>
               </Stack>
 
               <Stack direction="column" gap="30px">
@@ -93,7 +93,7 @@ const Profile = ({ type, name, avatar, email, properties }: ProfileProps) => (
       padding="20px"
       bgcolor="#FCFCFC"
     >
-      <Typography fontSize={18} fontWeight={600} color="#11142D">{type} Properties</Typography>
+      <Typography fontSize={18} fontWeight={600} color="#11142D">{type} Channels</Typography>
 
       <Box
         mt={2.5}

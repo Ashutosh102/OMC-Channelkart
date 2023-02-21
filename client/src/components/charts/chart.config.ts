@@ -18,7 +18,7 @@ export const TotalRevenueOptions: ApexOptions = {
       show: false,
     },
   },
-  colors: ['#475BE8', '#CFC8FF'],
+  colors: ['#ff0f37', '#fa9898'],
   plotOptions: {
     bar: {
       borderRadius: 4,

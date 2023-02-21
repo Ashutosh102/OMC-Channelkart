@@ -7,7 +7,7 @@ const Form = ({ type, register, handleSubmit, handleImageChange, formLoading, on
   return (
     <Box>
       <Typography fontSize={25} fontWeight={700} color="#FFFFFF">
-        {type} a Property
+        {type} a Channel
       </Typography>
 
       <Box mt={2.5} borderRadius="15px" padding="20px" bgcolor="#fcfcfc">
@@ -15,7 +15,7 @@ const Form = ({ type, register, handleSubmit, handleImageChange, formLoading, on
         onSubmit={handleSubmit(onFinishHandler)}
         >
           <FormControl>
-            <FormHelperText sx={{ fontWeight: 500, margin: '10px 0', fontSize: 16, color: '#11142d'}}>Enter property name</FormHelperText>
+            <FormHelperText sx={{ fontWeight: 500, margin: '10px 0', fontSize: 16, color: '#11142d'}}>Enter Channel name</FormHelperText>
             <TextField 
               fullWidth
               required
@@ -46,7 +46,7 @@ const Form = ({ type, register, handleSubmit, handleImageChange, formLoading, on
                 fontSize: 16,
                 color: '#11142d' 
               }}>
-                Select Property Type
+                Select Channel Type
               </FormHelperText>
               <Select
                 variant="outlined"
@@ -54,21 +54,21 @@ const Form = ({ type, register, handleSubmit, handleImageChange, formLoading, on
                 displayEmpty
                 required
                 inputProps={{ 'aria-label': 'Without label' }}
-                defaultValue="aparment"
+                defaultValue="tech"
                 {...register('propertyType', { required: true})}
               >
-                <MenuItem value="apartment">Apartment</MenuItem>
-                <MenuItem value="villa">Villa</MenuItem>
-                <MenuItem value="farmhouse">farmhouse</MenuItem>
-                <MenuItem value="condos">Condos</MenuItem>
-                <MenuItem value="townhouse">Townhouse</MenuItem>
-                <MenuItem value="duplex">Duplex</MenuItem>
+                <MenuItem value="tech">Technology</MenuItem>
+                <MenuItem value="food">Food</MenuItem>
+                <MenuItem value="sports">Sports</MenuItem>
+                <MenuItem value="lifestyle">Lifestyle</MenuItem>
+                <MenuItem value="vlog">Vlog</MenuItem>
+                <MenuItem value="funny">Funny</MenuItem>
                 <MenuItem value="studio">Studio</MenuItem>
-                <MenuItem value="chalet">Chalet</MenuItem>
+                <MenuItem value="others">Others</MenuItem>
               </Select>
             </FormControl>
             <FormControl>
-            <FormHelperText sx={{ fontWeight: 500, margin: '10px 0', fontSize: 16, color: '#11142d'}}>Enter property price</FormHelperText>
+            <FormHelperText sx={{ fontWeight: 500, margin: '10px 0', fontSize: 16, color: '#11142d'}}>Enter Channel price</FormHelperText>
             <TextField 
               fullWidth
               required
@@ -95,7 +95,7 @@ const Form = ({ type, register, handleSubmit, handleImageChange, formLoading, on
 
           <Stack direction="column" gap={1} justifyContent="center" mb={2}>
               <Stack direction="row" gap={2}>
-                <Typography color="#11142d" fontSize={16} fontWeight={500} my="10px">Property Photo</Typography>
+                <Typography color="#11142d" fontSize={16} fontWeight={500} my="10px">Channel Photo</Typography>
 
                 <Button component="label" sx={{ width: 'fit-content', color: "#2ed480", textTransform: 'capitalize', fontSize: 16}}>
                   Upload *
@@ -116,7 +116,7 @@ const Form = ({ type, register, handleSubmit, handleImageChange, formLoading, on
           <CustomButton 
             type="submit"
             title={formLoading ? 'Submitting...' : 'Submit'}
-            backgroundColor="#475be8"
+            backgroundColor="#ff0f37"
             color="#fcfcfc"
           />
         </form>

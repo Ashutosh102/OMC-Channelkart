@@ -44,13 +44,13 @@ const AllProperties = () => {
       <Box mt="20px" sx={{display: 'flex', flexWrap: 'wrap', gap: 3}}>
         <Stack direction="column" width="100%">
           <Typography fontSize={25} fontWeight={700} color="#FFFFFF">
-            {!allProperties.length ?'There are no properties' : 'All Properties'}</Typography>
+            {!allProperties.length ?'There are no channels' : 'All Channels'}</Typography>
             <Box mb={2} mt={3} display="flex" width="84%" justifyContent="space-between" flexWrap="wrap">
               <Box display="flex" gap={2} flexWrap="wrap" mb={{ xs: '20px', sm: 0 }}>
                 <CustomButton 
                   title={`Sort price ${currentPrice === 'asc' ? '↑' : '↓'}`}
                   handleClick={() => toggleSort('price')}
-                  backgroundColor="#475be8"
+                  backgroundColor="#ff0f37"
                   color="#fcfcfc"
                 />
                 <TextField 
@@ -87,7 +87,7 @@ const AllProperties = () => {
                   }}
                 >
                   <MenuItem value="">All</MenuItem>
-                  {['Apartment', 'Villa', 'Farmhouse', 'Condos', 'Townhouse', 'Duplex', 'Studio', 'Chalet'].map((type) => (
+                  {['Technology', 'Food', 'Sports', 'Lifestyle', 'Vlog', 'Funny', 'Studio', 'Others'].map((type) => (
                     <MenuItem key={type} value={type.toLowerCase()}>{type}</MenuItem>
                   ))}
                 </Select>
@@ -100,9 +100,9 @@ const AllProperties = () => {
 
       <Stack direction="row" justifyContent="space-between" alignItems="center">
         <CustomButton 
-          title="Add Property"
+          title="Add Channel"
           handleClick={() => navigate('/properties/create')}
-          backgroundColor="#475be8"
+          backgroundColor="#ff0f37"
           color="#fcfcfc"
           icon={<Add />}
         />
@@ -126,7 +126,7 @@ const AllProperties = () => {
           <CustomButton 
             title="Previous"
             handleClick={() => setCurrent((prev) => prev - 1)}
-            backgroundColor="#475be8"
+            backgroundColor="#ff0f37"
             color="#fcfcfc"
             disabled={!(current > 1)}
           />
@@ -136,7 +136,7 @@ const AllProperties = () => {
           <CustomButton 
             title="Next"
             handleClick={() => setCurrent((prev) => prev + 1)}
-            backgroundColor="#475be8"
+            backgroundColor="#ff0f37"
             color="#fcfcfc"
             disabled={current === pageCount}
           />
